@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 import 'typeface-roboto';
 import QuoteMachine from './quotemachine';
+import 'typeface-roboto';
 
 const styles = {
 	container: {
@@ -12,6 +13,11 @@ const styles = {
 		height: '100vh',
 		alignItems: 'center',
 	},
+
+	// item: {
+	// 	height: '25vh',
+	// 	padding: 'auto',
+	// },
 };
 
 class App extends Component {
@@ -118,10 +124,17 @@ class App extends Component {
 					container
 					className={this.props.classes.container}
 					justify='center'>
-					<Grid item xs={4}>
+					<Grid
+						item
+						xs={8}
+						lg={4}
+						md={4}
+						xl={3}
+						className={this.props.classes.item}>
 						<QuoteMachine
 							selectedQuote={this.selectedQuote}
 							handleClick={this.handleClick}
+							selectedColor={this.selectedColor}
 						/>
 					</Grid>
 				</Grid>
