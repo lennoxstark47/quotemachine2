@@ -131,11 +131,13 @@ class App extends Component {
 						md={4}
 						xl={3}
 						className={this.props.classes.item}>
-						<QuoteMachine
-							selectedQuote={this.selectedQuote}
-							handleClick={this.handleClick}
-							selectedColor={this.selectedColor}
-						/>
+						{this.selectedQuote ? (
+							<QuoteMachine
+								selectedQuote={this.selectedQuote}
+								handleClick={this.handleClick}
+								selectedColor={this.selectedColor}
+							/>
+						) : null}
 					</Grid>
 				</Grid>
 			</div>
